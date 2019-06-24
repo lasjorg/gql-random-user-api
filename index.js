@@ -69,7 +69,9 @@ const server = new ApolloServer({
   resolvers,
   dataSources: () => ({
     randomUserAPI: new RandomUserAPI()
-  })
+  }),
+  introspection: true,
+  playground: true
 });
 
 server.listen();
